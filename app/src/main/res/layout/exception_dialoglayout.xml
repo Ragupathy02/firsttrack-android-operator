@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="330dp"
+        android:id="@+id/dialog_linear"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_board"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/t_xxh_22"
+            android:layout_marginEnd="@dimen/t_xxh_22">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:overlapAnchor="false"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/exception_background"
+                    android:layout_height="@dimen/xxhdpi_50"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/im_timeline"
+                    android:visibility="gone"
+                    android:src="@drawable/clean_timeline"
+                    android:layout_centerVertical="true">
+                </ImageView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/t_xxh_10"
+                    android:layout_toRightOf="@+id/im_timeline">
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:visibility="gone"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:hint="Select Exception Process"
+                        android:id="@+id/dummy_text"
+                        android:textColorHint="#000000">
+                    </android.support.v7.widget.AppCompatTextView>
+                </RelativeLayout>
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_spinarrow"
+
+                    android:layout_centerVertical="true"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/t_xxh_15"
+                    android:id="@+id/spinn_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/t_xxh_15" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxhdpi_50"
+            android:background="@drawable/exception_background"
+            android:layout_marginTop="@dimen/t_xxh_20"
+            android:layout_marginStart="@dimen/t_xxh_22"
+            android:layout_marginEnd="@dimen/t_xxh_22">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:text="5566666655"
+                android:id="@+id/tv_date"
+                android:layout_marginLeft="13dp"
+                android:textColor="#c1c1c1"
+                android:gravity="center_vertical">
+            </android.support.v7.widget.AppCompatTextView>
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_calendar"
+                android:layout_marginRight="@dimen/t_xxh_10"
+                android:id="@+id/iv_calendar">
+            </android.support.v7.widget.AppCompatImageView>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/t_xxh_22"
+            android:layout_marginTop="@dimen/t_xxh_20"
+            android:layout_marginEnd="@dimen/t_xxh_22"
+            android:orientation="vertical"
+            android:background="@drawable/feedback_dialog"
+            android:layout_marginRight="@dimen/t_xxh_14">
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/t_xxh_10"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_exception_feedback"
+                android:background="@null"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:layout_marginLeft="@dimen/t_xxh_15"
+                android:hint="Write Your Feedback"
+                android:textColorHint="#c1c1c1"
+                android:textColor="#c1c1c1">
+
+            </android.support.v7.widget.AppCompatEditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginRight="@dimen/t_xxh_14"
+            android:layout_marginBottom="@dimen/t_xxh_10"
+            android:layout_marginTop="@dimen/t_xxh_26"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:layout_marginRight="41dp"
+                android:textSize="12sp"
+                android:id="@+id/tv_cancel"
+                android:textColor="#2c3550">
+
+            </TextView>
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:text="Submit"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:background="@drawable/submit_bg"
+                android:id="@+id/btn_submit_dialog">
+            </android.support.v7.widget.AppCompatButton>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

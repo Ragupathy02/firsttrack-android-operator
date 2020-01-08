@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/screen_status_color</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/sourcesanspro_regular</item>
+        <item name="android:label">@string/app_name</item>
+    </style>
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/sourcesanspro_semibold</item>
+    </style>
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+    <style name="MyFilledBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/colorPrimary</item>
+
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <!--<item name="android:windowExitAnimation">@anim/slide_out_left</item>-->
+    </style>
+    <style name="Tooltip2">
+        <item name="android:text">qwqwrqwfqwfqwfqwfqwf</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="Tooltip">
+        <item name="android:text">This is Notification</item>
+        <item name="android:textSize">@dimen/t_xxh_18</item>
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+    </style>
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/spinner_textcolour</item>
+
+
+
+    </style>
+
+
+</resources>

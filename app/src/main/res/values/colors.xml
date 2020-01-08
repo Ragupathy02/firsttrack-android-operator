@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#f67265</color>
+    <color name="screen_status_color">#ffffff</color>
+    <color name="tab_colour">#c1c1c1</color>
+    <color name="text_colour">#2c3550</color>
+    <color name="progress_color2">#a63cc4</color>
+    <color name="progress_color3">#ed9124</color>
+    <color name="progress_color4">#2ab37d</color>
+    <color name="hint_text">#d9d9d9</color>
+    <color name="progress_color1">#e57d65</color>
+    <color name="progress_text_color">#c1c1c1</color>
+    <color name="welcome_textcolour">#f67265</color>
+    <color name="signin_textcolour">#8d8d8d</color>
+    <color name="process_statuscolour">#2c3550</color>
+    <color name="jobstatus_titlecolur">#2699fb</color>
+    <color name="process_notviewed_text_colour">#d0d0d0</color>
+    <color name="signin_btncolour">#ffffff</color>
+    <color name="app_name">#3a3a3a</color>
+    <color name="dummy_txt">#d0d0d0</color>
+    <color name="eptn_btn_color">#fd5b5b</color>
+    <color name="exception_text_color">#ea2b64</color>
+    <color name="spinner_textcolour">#878787</color>
+    <color name="order_excpt_color">#ea2b64</color>
+    <color name="login_box_clr">#f67265</color>
+    <color name="tab_bg">#f5f7ff</color>
+
+
+
+
+</resources>

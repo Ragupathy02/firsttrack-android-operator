@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FirstTrackit Operator</string>
+    <string name="Welcome_text">Welcome Back,</string>
+    <string name="Sigin">Sign in to Continue</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="otp">Enter your mail Id to get OTP  </string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="company_id">Company Name</string>
+    <string name="operator_code">Operator Code</string>
+    <string name="customer_name">Operator Name</string>
+    <string name="purchase_order">Purchase Order</string>
+    <string name="line_no">Line Number</string>
+    <string name="quantity">Qty</string>
+    <string name="order_started">Order Started</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="cleaning">Cleaning</string>
+    <string name="cutting">Cutting</string>
+    <string name="Packing">Packing</string>
+    <string name="sigin">Sign in</string>
+    <string name="job_cofirmation">Job Confirmation</string>
+    <string name="empty_data">No Data is Found</string>
+    <string name="exepction">Exception</string>
+    <string name="forgot_pwd">Forgot Password</string>
+    <string name="splash_screen_appname">First Track It</string>
+</resources>

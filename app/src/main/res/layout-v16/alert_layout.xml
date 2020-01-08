@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_button"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:text="Exit Confirmation"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:gravity="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/t_xxh_20"
+        android:text="Are you Sure Want to Exit"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:padding="5dp"    />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/t_xxh_10"
+        android:paddingRight="@dimen/t_xxh_10"
+        android:layout_marginTop="@dimen/t_xxh_20"
+        android:layout_marginBottom="@dimen/t_xxh_20"
+        android:gravity="center"        >
+        <Button
+            android:layout_width="@dimen/xxhdpi_125"
+            android:layout_height="@dimen/xxhdpi_30"
+            android:id="@+id/btn_yes"
+            android:textColor="@color/colorAccent"
+            android:text="Yes"
+
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:background="@drawable/capsule_button"
+            android:textSize="@dimen/t_xxh_15"
+            />
+        <Button
+            android:layout_width="@dimen/xxhdpi_125"
+            android:layout_height="@dimen/xxhdpi_30"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/btn_no"
+            android:text="No"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_marginLeft="@dimen/t_xxh_10"
+            android:background="@drawable/capsule_button"
+            android:textSize="@dimen/t_xxh_15"            />
+    </LinearLayout>
+</LinearLayout>

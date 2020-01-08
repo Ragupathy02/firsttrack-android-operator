@@ -1,0 +1,20 @@
+
+<CheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="@style/spinnerDropDownItemStyle"
+    android:fontFamily="@font/sourcesanspro_regular"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/xxhdpi_50"
+    android:paddingLeft="@dimen/t_xxh_15"
+    android:gravity="center_vertical"
+    android:textColor="#2c3550"
+    android:text="hello"
+    android:drawablePadding="@dimen/t_xxh_10"
+    android:drawableStart="@drawable/ic_packing"
+    android:background="@drawable/spinner_selector"
+    android:singleLine="true" >
+</CheckedTextView>
+
+
+

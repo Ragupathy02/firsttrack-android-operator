@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/tab_bg"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_image"
+            android:paddingLeft="@dimen/t_xxh_30"
+            android:src="@drawable/ic_packing">
+        </android.support.v7.widget.AppCompatImageView>
+        <View
+            android:layout_width="85dp"
+            android:layout_below="@+id/iv_image"
+            android:layout_height="90dp"
+            android:layerType="software"
+            android:background="@drawable/vertical_dashed_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/t_xxh_20"
+            android:layout_toRightOf="@+id/iv_image">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#2c3550"
+                    android:id="@+id/tv_exceptionprocess"
+                    android:letterSpacing="0.02"
+                    android:layout_marginLeft="@dimen/t_xxh_15"
+                    android:lineSpacingExtra="0sp"
+                    android:text="Cleaning">
+                </android.support.v7.widget.AppCompatTextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/t_xxh_20"
+                android:layout_marginLeft="@dimen/t_xxh_15"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#c1c1c1"
+                    android:text="0056 -">
+
+                </android.support.v7.widget.AppCompatTextView>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#c1c1c1"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="@dimen/t_xxh_10"
+                    android:text="Chris Hemsworth">
+
+                </android.support.v7.widget.AppCompatTextView>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#c1c1c1"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="@dimen/xxhdpi_5"
+                    android:text="|">
+                </android.support.v7.widget.AppCompatTextView>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#c1c1c1"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="@dimen/xxhdpi_5"
+                    android:text="3.56 PM">
+                </android.support.v7.widget.AppCompatTextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:id="@+id/tv_exception"
+                android:background="@drawable/exception_machine"
+                android:layout_marginTop="@dimen/t_xxh_15"
+                android:layout_marginRight="@dimen/t_xxh_15">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#ea2b64"
+                    android:text="Machine is not working properly.It takes two day time">
+                </android.support.v7.widget.AppCompatTextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

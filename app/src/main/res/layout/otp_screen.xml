@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/t_xxh_20"
+        android:layout_marginLeft="@dimen/t_xxh_18"
+        android:id="@+id/im_back"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:layout_marginTop="@dimen/t_xxh_26"
+        android:textColor="#3b7ded"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/enter_otp"
+        android:gravity="center_horizontal"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/xxhdpi_10"
+        android:textColor="#8d8d8d"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center_horizontal"
+        android:text="Enter OTP Sent to Your Mail ID"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginLeft="@dimen/xxhdpi_40"
+        android:layout_marginTop="@dimen/xxhdpi_30"
+        android:layout_marginRight="@dimen/xxhdpi_40">
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_pin"
+            android:id="@+id/et_otp_pin1"/>
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/xxhdpi_30"
+            android:background="@drawable/otp_pin"
+            android:id="@+id/et_otp_pin2"/>
+
+    </LinearLayout>
+
+</LinearLayout>

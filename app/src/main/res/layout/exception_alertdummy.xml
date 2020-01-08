@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type Your Comment : "
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/et_exception_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/t_xxh_10"
+        android:hint="Enter your comment"
+        android:singleLine="true"
+        android:textColorHint="#79000000"
+        android:textCursorDrawable="@color/colorAccent"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textColor="#79000000"
+        android:layout_height="wrap_content" >
+        <requestFocus />
+    </EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btn_ok"
+        android:textColor="#ffffff"
+        android:layout_marginTop="@dimen/t_xxh_15"
+        android:background="@color/colorAccent"
+        android:text="Comment"
+        android:textAllCaps="false"/>
+</LinearLayout>
+

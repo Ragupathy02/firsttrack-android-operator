@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="@dimen/xxhdpi_30">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/iv_login_img" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textColor="@color/welcome_textcolour"
+            android:letterSpacing="0.02"
+            android:layout_marginTop="110dp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4sp"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:text="@string/Welcome_text"
+            android:id="@+id/tv_welcome"
+            android:gravity="center_horizontal" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/signin_textcolour"
+            android:letterSpacing="0.02"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_marginTop="@dimen/t_xxh_10"
+            android:lineSpacingExtra="6sp"
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_signin"
+            android:text="@string/Sigin"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="29dp"
+            app:boxStrokeColor="@color/colorAccent"
+            android:textColorHint="@color/hint_text"
+            android:layout_marginLeft="@dimen/t_xxh_22"
+            android:layout_marginRight="@dimen/t_xxh_22">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/et_email"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:hint="Operator Code"
+                android:textColor="#878787"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="5sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/colorAccent"
+            android:textColorHint="@color/hint_text"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="@dimen/t_xxh_22"
+            android:layout_marginRight="@dimen/t_xxh_22">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:id="@+id/et_password"
+                android:textColor="#878787"
+                android:singleLine="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:hint="Password"
+                android:textColorHint="@color/colorPrimary"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="5sp"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:id="@+id/skip_button"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/t_xxh_10"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginRight="@dimen/t_xxh_22"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="@dimen/t_xxh_22"
+        android:layout_alignParentBottom="true">
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/signin_btncolour"
+            android:letterSpacing="0.02"
+            android:textAllCaps="false"
+            android:lineSpacingExtra="5sp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:id="@+id/btn_signin"
+            android:background="@drawable/sigin"
+            android:text="@string/sigin"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="#3b7ded"
+            android:id="@+id/tv_forgot_pwd"
+            android:visibility="gone"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/forgot_pwd"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
