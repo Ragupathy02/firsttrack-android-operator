@@ -42,7 +42,7 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"
             android:screenOrientation="portrait" />
-        <activity android:name=".Ui.ExceptionActivity"
+        <activity android:name=".Ui.Exceptiondetails1"
             android:screenOrientation="portrait"/>
         <activity android:name=".Ui.Exception_details"
             android:screenOrientation="portrait"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <RelativeLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:tools="http://schemas.android.com/tools"
-     android:background="#f5f7ff"
-      android:id="@+id/job_status_relative"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f5f7ff"
+    android:id="@+id/job_status_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ScrollView
         android:layout_width="match_parent"
         android:scrollbars="none"
@@ -265,23 +265,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/t_xxh_20"
-                    android:layout_marginLeft="@dimen/t_xxh_15"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <ImageView
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:src="@drawable/ic_completed"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="23dp"
                             />
                         <android.support.v7.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="14sp"
-                            android:layout_marginLeft="@dimen/t_xxh_10"
+                            android:layout_marginLeft="@dimen/t_xxh_20"
                             android:fontFamily="@font/sourcesanspro_semibold"
                             android:layout_gravity="center_vertical"
                             android:textColor="@color/text_colour"
@@ -293,21 +292,21 @@
                             />
                     </LinearLayout>
                     <View
-                        android:layout_width="@dimen/xxhdpi_50"
-                        android:layout_height="@dimen/xxhdpi_50"
+                        android:layout_width="85dp"
+                        android:layout_below="@+id/iv_image"
+                        android:layout_height="90dp"
                         android:layerType="software"
                         android:background="@drawable/vertical_dashed_line"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/t_xxh_15"
                     android:orientation="horizontal">
                     <ImageView
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
+                        android:layout_width="40dp"
+                        android:layout_height="@dimen/xxhdpi_40"
                         android:src="@drawable/ic_scheduled"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="23dp"
                         />
                     <android.support.v7.widget.AppCompatTextView
                         android:layout_width="wrap_content"
@@ -317,7 +316,7 @@
                         android:fontFamily="@font/sourcesanspro_semibold"
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/text_colour"
-                        android:layout_marginLeft="@dimen/t_xxh_10"
+                        android:layout_marginLeft="@dimen/t_xxh_20"
                         android:id="@+id/tv_process_schedule"
                         android:letterSpacing="0.02"
                         android:lineSpacingExtra="0sp"
@@ -356,4 +355,4 @@
             android:text="@string/exepction"
             android:background="@drawable/exception_btn"/>
     </RelativeLayout>
-  </RelativeLayout>
+</RelativeLayout>

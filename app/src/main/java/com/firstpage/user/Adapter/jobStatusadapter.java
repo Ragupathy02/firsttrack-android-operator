@@ -28,6 +28,8 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
     SharedPreference sharedPreference = new SharedPreference();
     String is_exception;
     String id;
+    String customer_name;
+    String customer_code;
 //    String process_id;
     public jobStatusadapter(Context context, ArrayList<Order_process> jobongoing)
     {
@@ -44,10 +46,19 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
 
     }
 
+    public jobStatusadapter(Context context, ArrayList<Order_process> jobongoing, String id, String customer_name, String customer_code) {
+        this.context=context;
+        this.jobongoing=jobongoing;
+        this.id=id;
+        this.customer_name = customer_name;
+        this.customer_code = customer_code;
+
+    }
+
     @NonNull
     @Override
     public Viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.job_details_adapter_items, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.jobdetailadapter_items_dummy, viewGroup, false);
         return new Viewholder(view);
     }
 
@@ -78,6 +89,11 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
             viewholder.iv_timeline.setImageResource(R.drawable.ic_packing);
             viewholder.tvProcess_name.setText(""+ongoing.getProcess().getProcess_name());
             viewholder.tvProcess_name.setTextColor(context.getResources().getColor(R.color.text_colour));
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
+            viewholder.tv_customercode.setTextColor(context.getResources().getColor(R.color.text_colour));
+            viewholder.tv_customername.setTextColor(context.getResources().getColor(R.color.text_colour));
+            viewholder.tv_connect.setTextColor(context.getResources().getColor(R.color.text_colour));
         }
         else if(ongoing.getStatus()==1)
         {
@@ -87,6 +103,11 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
             viewholder.btnStart.setText("Start");
             viewholder.btnFinish.setBackgroundResource(R.drawable.finish_button);
             viewholder.btnFinish.setText("Finish");
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
+
+
+
 
         }
         else if(ongoing.getStatus()==2)
@@ -100,6 +121,8 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
             viewholder.iv_timeline.setImageResource(R.drawable.half_circle);
             viewholder.btnFinish.setText("Finish");
             viewholder.btnFinish.setEnabled(true);
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
 //            viewholder.linearcomment.setVisibility(View.VISIBLE);
 //            viewholder.editcomment.requestFocus();
 
@@ -115,9 +138,10 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
             viewholder.iv_timeline.setImageResource(R.drawable.half_circle);
             viewholder.btnFinish.setText("Finish");
             viewholder.btnFinish.setEnabled(true);
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
 //            viewholder.linearcomment.setVisibility(View.VISIBLE);
 //            viewholder.editcomment.requestFocus();
-
         }
 
 
@@ -564,6 +588,10 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
         public ImageView iv_timeline;
         public LinearLayout linearcomment;
         public AppCompatTextView editcomment;
+        public AppCompatTextView tv_customercode;
+        public AppCompatTextView tv_customername;
+        public LinearLayout linear_customerdetails;
+        public AppCompatTextView tv_connect;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             im_clean_timeline=(ImageView)itemView.findViewById(R.id.im_clean_timeline);
@@ -574,6 +602,10 @@ public class jobStatusadapter extends RecyclerView.Adapter<jobStatusadapter.View
             linearcomment=(LinearLayout)itemView.findViewById(R.id.layout_comment);
             iv_timeline=(ImageView)itemView.findViewById(R.id.im_clean_timeline);
             editcomment=(AppCompatTextView) itemView.findViewById(R.id.et_comment);
+            tv_customercode=(AppCompatTextView)itemView.findViewById(R.id.tv_ccode);
+            tv_customername=(AppCompatTextView)itemView.findViewById(R.id.tv_cname);
+            linear_customerdetails=(LinearLayout)itemView.findViewById(R.id.tv_customerdetails);
+            tv_connect=(AppCompatTextView)itemView.findViewById(R.id.tv_connect);
 //            editcomment.requestFocus();
 //            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
 //            imm.showSoftInput(editcomment, InputMethodManager.SHOW_IMPLICIT);

@@ -93,6 +93,7 @@ public class Process_fragment extends Fragment {
     String value;
     ArrayList<String> dummydata;
     ArrayList<String> processdetail = new ArrayList<>();
+    ArrayList<String> orderprocess = new ArrayList<String>();
 
 //    Serializable ongoing;
 //    Serializable order_process;
@@ -138,11 +139,22 @@ public class Process_fragment extends Fragment {
 
             }
             else {
+
                 btn_exception.setVisibility(View.GONE);
             }
 
         }
-        processdetail.add(0,"Select Exception Process");
+
+        for(int i1=0;i1<ongoing.getOrder_process().size();i1++)
+        {
+            if(ongoing.getOrder_process().get(i1).getStatus()!=4)
+            {
+                orderprocess.add(ongoing.getOrder_process().get(i1).getProcess().getProcess_name());
+
+            }
+        }
+        orderprocess.add(0,"Select Exception Process");
+//        processdetail.add(0,"Select Exception Process");
 //        Bundle ongoing = bundle.getBundle("data");
 
 
@@ -153,7 +165,7 @@ public class Process_fragment extends Fragment {
 //        }
 //
         dataAdapter = new ArrayAdapter<String>(
-                getActivity(), R.layout.simple_spinner_item, processdetail) {
+                getActivity(), R.layout.simple_spinner_item, orderprocess) {
             @Override
             public boolean isEnabled(int position) {
                 if (position == 0) {
@@ -510,7 +522,7 @@ public class Process_fragment extends Fragment {
                         if (onedata.equals(response.body().getData().get(i).get_id())) {
 
                             Log.e("ragu", "onResponse:process name " + processname);
-                            processdetailsadapter = new Processdetailsadapter(getActivity(), response.body().getData().get(i).getOrder_process(), response.body().getData().get(i).getLine_numbers().get_id(), Process_fragment.this);
+                            processdetailsadapter = new Processdetailsadapter(getActivity(), response.body().getData().get(i).getOrder_process(), response.body().getData().get(i).getLine_numbers().get_id(),response.body().getData().get(i).getLine_numbers().getCustomer_id().getCustomer_code(),response.body().getData().get(i).getLine_numbers().getCustomer_id().getCustomer_name() ,Process_fragment.this);
                             Log.e("ragu", "onResponse:processname ");
                             Process_recyclerview.setAdapter(processdetailsadapter);
 

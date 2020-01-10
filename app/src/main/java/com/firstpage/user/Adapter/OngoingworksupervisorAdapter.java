@@ -25,6 +25,7 @@ import com.firstpage.user.Model.Ongoing;
 import com.firstpage.user.Model.Order_process;
 import com.firstpage.user.R;
 import com.firstpage.user.Ui.ExceptionActivity;
+import com.firstpage.user.Ui.Exceptiondetails1;
 import com.firstpage.user.Ui.jobdetailstatustrackActivity;
 
 import java.util.ArrayList;
@@ -572,7 +573,7 @@ OngoingsupervisorFragment ongoingsupervisorFragment;
 //                    ongoingsupervisorFragment.getmethod("hello");
                     Log.e("ragu", "checkconfirm: inside ");
                 sharedPreference.putString(context,"one",ongoing_work.get_id());
-                Intent i = new Intent(context, ExceptionActivity.class);
+                Intent i = new Intent(context, Exceptiondetails1.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("keyarrays", ongoing_work);
                 i.putExtras(bundle);

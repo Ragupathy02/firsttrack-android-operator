@@ -5,14 +5,14 @@
     android:id="@+id/job_status_relative"
     android:layout_height="match_parent"
     android:background="#f5f7ff">
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/xxhdpi_5"
         android:layout_above="@+id/relat">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/xxhdpi_5">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -25,7 +25,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_completed"
+                        android:src="@mipmap/ic_launcher"
                         android:layout_marginLeft="23dp"
                         />
                     <android.support.v7.widget.AppCompatTextView
@@ -33,7 +33,6 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:layout_marginLeft="@dimen/t_xxh_20"
-                        android:fontFamily="@font/sourcesanspro_semibold"
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/text_colour"
                         android:textStyle="bold"
@@ -56,7 +55,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="@dimen/xxhdpi_40"
-                        android:src="@drawable/ic_scheduled"
+                        android:src="@mipmap/ic_launcher"
                         android:layout_marginLeft="23dp"
                         />
                     <android.support.v7.widget.AppCompatTextView
@@ -64,7 +63,6 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:fontFamily="@font/sourcesanspro_semibold"
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/text_colour"
                         android:layout_marginLeft="@dimen/t_xxh_20"
@@ -77,14 +75,12 @@
                 <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="true"
-                    android:layout_marginBottom="@dimen/xxhdpi_5"
                     android:id="@+id/process_recycle">
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>
 
         </RelativeLayout>
-    </ScrollView>
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,7 +92,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:fontFamily="@font/sourcesanspro_regular"
             android:textAllCaps="false"
             android:id="@+id/btn_exception"
             android:textColor="#9d2d74"

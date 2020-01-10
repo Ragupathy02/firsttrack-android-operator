@@ -128,7 +128,7 @@ public class jobdetailstatustrackActivity extends AppCompatActivity {
     public static AlertDialog alertDialog;
     static TextView tv_check_connection;
     AppCompatEditText et_exceptionfeed;
-    List<String> processlist;
+    ArrayList<String> processlist = new ArrayList<String>();
     String total_process;
     String totalorder;
     ArrayAdapter<String> ordertracker;
@@ -297,7 +297,7 @@ public class jobdetailstatustrackActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.jobdetails_adapter_activity);
+        setContentView(R.layout.jobdetaisadapter_activity1);
         client = new OkHttpClient();
         okHttpClient = new OkHttpClient();
         httpClient = new OkHttpClient();
@@ -338,7 +338,7 @@ public class jobdetailstatustrackActivity extends AppCompatActivity {
 
         sharedPreference = new SharedPreference();
         id_user = sharedPreference.getString(getApplicationContext(), "id_user");
-        processlist = new ArrayList<String>();
+
         Log.e("ragu", "onCreate:user id " + id_user);
         getsocketinitconnection();
 //        etException_text=(EditText) findViewById(R.id.et_exception_text);
@@ -349,48 +349,34 @@ public class jobdetailstatustrackActivity extends AppCompatActivity {
 
         for (int i1 = 0; i1 < ongoing.getOrder_process().size(); i1++) {
             Log.e("ragu", "onCreate:process name " + ongoing.getOrder_process().get(i1).getProcess().getProcess_name());
-            if(ongoing.getOrder_process().get(i1).getStatus()!=4)
+            if(ongoing.getOrder_process().get(i1).getStatus()==4)
+            {
+
+            }
+            else
+            {
+                processlist.add(ongoing.getOrder_process().get(i1).getProcess().getProcess_name());
+
+            }
+
+        }
+        processlist.add(0, "Select Exception Process");
+        for(int i2=0;i2<ongoing.getOrder_process().size();i2++)
+        {
+            if(ongoing.getOrder_process().get(i2).getStatus()!=4)
             {
                 btn_exception.setVisibility(View.VISIBLE);
                 break;
+
             }
-            else {
+
+            else
+            {
                 btn_exception.setVisibility(View.GONE);
-                totalorder = ongoing.getOrder_process().get(i1).getProcess().getProcess_name();
-//                Log.e("ragu", "onCreate:exception false " );
-                processlist.add(totalorder);
 
             }
 
-
-//            if(ongoing.getOrder_process().get(i1).getStatus()==4)
-//            {
-//                Log.e("ragu", "onCreate:exception true " );
-//                btn_exception.setVisibility(View.GONE);
-//
-//            }
-//            else if(ongoing.getOrder_process().get(i1).getStatus()!=4)
-//            {
-//
-//                totalorder = ongoing.getOrder_process().get(i1).getProcess().getProcess_name();
-//                Log.e("ragu", "onCreate:exception false " );
-//                processlist.add(totalorder);
-//            }
-
-//            Set<String> set = new HashSet<>(processlist);
-//            processlist.clear();
-//            processlist.addAll(set);
-
-            Log.e("ragu", "onCreate:ttal " + processlist);
-
-
-//            Log.e("ragu", "onCreate:arraylist "+processlist );
-//            Log.e("ragu", "onCreate:process "+ongoing.getOrder_process().get(i).getProcess_time() );
-//            Log.e("ragu", "onCreate: "+ongoing.getOrder_process().get(i).getStatus() );
-//            Log.e("ragu", "onCreate: "+ongoing.getOrder_process().get(i).getOrder() );
-//            Log.e("ragu", "onCreate:process name "+ongoing.getOrder_process().get(i).getProcess().getProcess_name() );
         }
-        processlist.add(0, "Select Exception Process");
 
 
 //         dataAdapter = new ArrayAdapter<String>(this,
@@ -991,7 +977,7 @@ public class jobdetailstatustrackActivity extends AppCompatActivity {
 
     private void getjobdata() {
         Log.e("ragu", "getjobdata:ongoing_process " + ongoing.getOrder_process());
-        job_status_adapter = new jobStatusadapter(jobdetailstatustrackActivity.this, ongoing.getOrder_process(),ongoing.getLine_numbers().get_id());
+        job_status_adapter = new jobStatusadapter(jobdetailstatustrackActivity.this, ongoing.getOrder_process(),ongoing.getLine_numbers().get_id(),ongoing.getLine_numbers().getCustomer_id().getCustomer_name(),ongoing.getLine_numbers().getCustomer_id().getCustomer_code());
         job_statusRecycle.setAdapter(job_status_adapter);
 //        job_status_adapter.notifyDataSetChanged();
     }
@@ -1263,7 +1249,7 @@ public class jobdetailstatustrackActivity extends AppCompatActivity {
             @Override
             public void onError(Exception ex) {
                 Log.e("ragu", "onError: " + ex);
-                toastAnywhere("" + ex);
+//                toastAnywhere("" + ex);
 
             }
         };

@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/linear1"
             android:id="@+id/linear2"
-            android:layout_marginTop="85dp"
+           android:layout_marginTop="85dp"
             android:orientation="vertical">
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="80dp"

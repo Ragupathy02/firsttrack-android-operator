@@ -42,9 +42,6 @@ import com.firstpage.user.Fragment.OngoingFragment;
 import com.firstpage.user.Fragment.ProfileFragment;
 import com.firstpage.user.Model.Dummy;
 import com.firstpage.user.R;
-import com.nex3z.notificationbadge.NotificationBadge;
-
-
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 import org.json.JSONException;
@@ -75,7 +72,6 @@ public class WorkboardActivity extends AppCompatActivity    {
     private WebSocketClient mWebSocketClient;
     int count=0;
     public android.support.v7.app.AlertDialog deleteDialog;
-    public NotificationBadge notificationBadge;
     private BroadcastReceiver MyReceiver = null;
     Dummy dummy;
     private BroadcastReceiver mNetworkReceiver;
@@ -173,14 +169,7 @@ public class WorkboardActivity extends AppCompatActivity    {
 //        broadcastIntent();
         session = new SessionManager(getApplicationContext());
        count++;
-        notificationBadge=(NotificationBadge) findViewById(R.id.im_notifications);
-        notificationBadge.setText("0");
-        notificationBadge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"you clicked",Toast.LENGTH_LONG).show();
-            }
-        });
+
         Log.e("ragu", "onCreate:count"+count);
 
         Log.e("ragu", "onCreate: id is "+id );

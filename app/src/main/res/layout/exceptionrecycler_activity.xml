@@ -3,12 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="#f5f7ff">
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/tab_bg"
-        android:id="@+id/exception_recycler">
+        android:id="@+id/exception_recycler"
+        android:layout_marginTop="@dimen/t_xxh_10">
     </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

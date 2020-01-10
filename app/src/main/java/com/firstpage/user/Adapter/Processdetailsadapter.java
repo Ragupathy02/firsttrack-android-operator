@@ -2,6 +2,7 @@ package com.firstpage.user.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
@@ -24,6 +25,8 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
     String id;
     Process_fragment process_fragment;
     ArrayList<Processdetail> processdetailArrayList;
+    String customer_code;
+    String customer_name;
 
 //    public Processdetailsadapter(Context context, ArrayList<Order_process> order_processes) {
 //        this.context = context;
@@ -36,17 +39,22 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
         this.id = id;
     }
 
-    public Processdetailsadapter(Context context, ArrayList<Order_process> order_processes, String id, Process_fragment process_fragment) {
-        this.context=context;
-        this.order_processes=order_processes;
-        this.id=id;
-        this.process_fragment = process_fragment;
-    }
+
+//    public Processdetailsadapter (Context context,ArrayList<Order_process> order_processes,String id,Process_fragment process_fragment,String )
 
     public Processdetailsadapter(Context context, ArrayList<Processdetail> processdetailArrayList) {
         this.context=context;
         this.processdetailArrayList = processdetailArrayList;
 
+    }
+
+    public Processdetailsadapter(Context context, ArrayList<Order_process> order_processes, String id, String customer_code, String customer_name, Process_fragment process_fragment) {
+        this.context = context;
+        this.order_processes=order_processes;
+        this.id = id;
+        this.customer_code=customer_code;
+        this.customer_name = customer_name;
+        this.process_fragment = process_fragment;
     }
 
 
@@ -68,6 +76,11 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
             viewholder.iv_timeline.setImageResource(R.drawable.ic_packing);
             viewholder.tvProcess_clean.setText(""+order_process.getProcess().getProcess_name());
             viewholder.tvProcess_clean.setTextColor(context.getResources().getColor(R.color.text_colour));
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
+            viewholder.tv_customercode.setTextColor(context.getResources().getColor(R.color.text_colour));
+            viewholder.tv_customername.setTextColor(context.getResources().getColor(R.color.text_colour));
+            viewholder.tv_connect.setTextColor(context.getResources().getColor(R.color.text_colour));
 
         }
         else if(order_process.getStatus()==1)
@@ -78,6 +91,8 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
             viewholder.btnStart.setText("Start");
             viewholder.btnFinish.setBackgroundResource(R.drawable.finish_button);
             viewholder.btnFinish.setText("Finish");
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
 
         }
         else if(order_process.getStatus()==2)
@@ -91,6 +106,8 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
             viewholder.iv_timeline.setImageResource(R.drawable.half_circle);
             viewholder.btnFinish.setText("Finish");
             viewholder.btnFinish.setEnabled(true);
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
 
         }
         else if(order_process.getStatus()==3)
@@ -104,6 +121,8 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
             viewholder.iv_timeline.setImageResource(R.drawable.half_circle);
             viewholder.btnFinish.setText("Finish");
             viewholder.btnFinish.setEnabled(true);
+            viewholder.tv_customercode.setText(""+customer_code);
+            viewholder.tv_customername.setText(""+customer_name.trim());
 
         }
         viewholder.btnStart.setOnClickListener(new View.OnClickListener() {
@@ -326,6 +345,10 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
         public ImageView iv_timeline;
         public LinearLayout linearcomment;
         public AppCompatTextView editcomment;
+        public AppCompatTextView tv_customercode;
+        public AppCompatTextView tv_customername;
+        public AppCompatTextView tv_connect;
+
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
@@ -337,6 +360,9 @@ public class Processdetailsadapter extends RecyclerView.Adapter<Processdetailsad
             linearcomment=(LinearLayout)itemView.findViewById(R.id.layout_comment);
             iv_timeline=(ImageView)itemView.findViewById(R.id.im_clean_timeline);
             editcomment=(AppCompatTextView) itemView.findViewById(R.id.et_comment);
+            tv_customercode=(AppCompatTextView)itemView.findViewById(R.id.tv_ccode);
+            tv_customername=(AppCompatTextView)itemView.findViewById(R.id.tv_cname);
+            tv_connect=(AppCompatTextView)itemView.findViewById(R.id.tv_connect);
 
 
         }

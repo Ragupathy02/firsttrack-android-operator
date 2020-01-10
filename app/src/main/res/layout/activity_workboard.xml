@@ -47,15 +47,7 @@
                     android:id="@+id/im_notification"
                     android:layout_marginRight="@dimen/t_xxh_20"
                     android:layout_alignParentRight="true" />
-                <com.nex3z.notificationbadge.NotificationBadge
-                    android:id="@+id/im_notifications"
-                    android:layout_width="@dimen/t_xxh_28"
-                    android:layout_height="@dimen/t_xxh_28"
-                    android:layout_alignParentEnd="true"
-                    android:visibility="invisible"
-                    app:nbBackground="@drawable/badge_circle"
-                    android:layout_marginTop="@dimen/t_xxh_10"
-                    android:layout_marginRight="7dp"/>
+
             </RelativeLayout>
 
         </LinearLayout>
